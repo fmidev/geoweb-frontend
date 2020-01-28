@@ -1,0 +1,15 @@
+[{
+    "name": "FMI Open Data Radar",
+    "title": "FMI Open Data Radar",
+    "service": "https://openwms.fmi.fi/geoserver/Radar/wms",
+    "type": "WMS",
+    "goal": "LAYER",
+    "roles": ["USER", "MET"]
+}, {
+    "name": "EUMETSAT",
+    "title": "EUMETSAT",
+    "service": "https://eumetview.eumetsat.int/geoserv/wms",
+    "type": "WMS",
+    "goal": "LAYER",
+    "roles": ["USER", "MET"]
+}]
