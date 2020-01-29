@@ -1,11 +1,33 @@
 language: node_js
 node_js:
-  - '12.2.0'
+- stable
 cache:
   directories:
   - node_modules
-install:
-  - npm install
 script:
-  - npm test
-
+- npm install
+- npm run clean
+- npm run deploy:prod-quick
+- cp -f src/static/urls-firebase.json dist/urls.json
+deploy:
+  - provider: firebase
+    token:
+      secure: IRggHK6aoMoO5SC+xqjjz1qaSUnhQulhaXV2u+zFJOidFh/KcG4AfuACQINidWa+5q7Rxwq+roBz08sozgOmNQ6wgleLIHIj7D7nIgz351QbvY2o+0LM/Gjd0nC3gVK1I6H3Hy8ikFlH2K1UYSrbq9KL4r4TWVAWLUG4fbPw4ZNaqtEpIA6cCx+PZKClxB+CUq/EPbNpB4s/YCWnNbG1yfJvYcxZajYAG4W1urLAjGPpx52hlwUB6mXldSOWZLpya7QalbYdG5Ofi0VWMqeo6/g1IYWJPtqZ+Dz6f8LG/KYUSb39n7VamePC/HoYPI6gSBe2P2rDV+83qoXZMCZ+HTmaIz6PXVXvHUZWYfbKzrc85XsqevJJ4pjKvWl5c9fej+oS5sBu/U6lGJWwY6AR80IakfCOeSQ3X2l77JqvUi7z9LdwPZmj25cSDH7xrllAFO+joCKDqm/t0u3g3XEPNKEbOMZrYVBooXGt6liDAZ53Y7P0DqbTnsuR5BW6JGkVhgXtNlKC4+ljojvy5FoS/N4CKrhWmBCJVMYO5P6p4t0MaYVjOLh+Qov5dABrxvV1XxLE5YPiNLfN9SusMiMuFFe1P1GNpAP6y3uQfe7uZnnD1wp3tadM3JvNLuX96cCcvc8t8rmOBtH8dAumSW0D9a8bB9O+9JSp7BLL4Zz7jnY=
+    project: dev-geoweb-fmi-fi
+    skip_cleanup: true
+    on:
+      branch: devel
+  - provider: firebase
+    token:
+      secure: IRggHK6aoMoO5SC+xqjjz1qaSUnhQulhaXV2u+zFJOidFh/KcG4AfuACQINidWa+5q7Rxwq+roBz08sozgOmNQ6wgleLIHIj7D7nIgz351QbvY2o+0LM/Gjd0nC3gVK1I6H3Hy8ikFlH2K1UYSrbq9KL4r4TWVAWLUG4fbPw4ZNaqtEpIA6cCx+PZKClxB+CUq/EPbNpB4s/YCWnNbG1yfJvYcxZajYAG4W1urLAjGPpx52hlwUB6mXldSOWZLpya7QalbYdG5Ofi0VWMqeo6/g1IYWJPtqZ+Dz6f8LG/KYUSb39n7VamePC/HoYPI6gSBe2P2rDV+83qoXZMCZ+HTmaIz6PXVXvHUZWYfbKzrc85XsqevJJ4pjKvWl5c9fej+oS5sBu/U6lGJWwY6AR80IakfCOeSQ3X2l77JqvUi7z9LdwPZmj25cSDH7xrllAFO+joCKDqm/t0u3g3XEPNKEbOMZrYVBooXGt6liDAZ53Y7P0DqbTnsuR5BW6JGkVhgXtNlKC4+ljojvy5FoS/N4CKrhWmBCJVMYO5P6p4t0MaYVjOLh+Qov5dABrxvV1XxLE5YPiNLfN9SusMiMuFFe1P1GNpAP6y3uQfe7uZnnD1wp3tadM3JvNLuX96cCcvc8t8rmOBtH8dAumSW0D9a8bB9O+9JSp7BLL4Zz7jnY=
+    project: staging-geoweb-fmi-fi
+    skip_cleanup: true
+    on:
+      branch: staging
+  - provider: firebase
+    token:
+      secure: "bsjyj+A7eAW7zRGwcMdu17HEant0UfnsM74vOu+6LEueTsMgkiNLUEfSC8N18Ma1rtyweQM3eCzHm3DuF5vNiSQaGp+G69nFKcN0ZOGzCETon8bBMpm5kNQgO1NmRs557qNiqC3yR3fHZiwSazryeaCAa+xGMrfoBzsXIz5FXekAU61+uDptWYs1cUI9N2XLVN4nSv2xdBSIwunw0LlODPmECPox1yXHgcRhZHe3+R6psfl20xIdmHIb4+AoFlTqcDY9WFqxAJ69lo4uWFZ48LBt8l9cMYlvYOQm5PYH9VJlBrm+fod5KRc2kjIr6aVDmYjdSBlka+CskRaF8o8PawsGGEfWgPFFHYfW6MtIf/34GTww4Eh9ZQKinj4ozU46Cg66Mpzzq6cds0w8Gau1OzNyREGlCFJbRrULtNurqlcB3zI/jv6B186TDjJJ4ggZKk/zafQ5yXIsj7QsjvPQmFDZ3M8Zq8XEV4J7ziCvJf3bG6+qcCpioDBIT9KmqzORMSLekaQoyI/LLZ5b4nNmEocw9QOGDA+Wjp1acN6t0cjMJJdcHzA2AeYROmr0AfXrVK76b2ckACyK4EArX7OD2grTr2MzDL6pT+uQpVH5LN4dKSKxgILj2tesMT8/Q6axTtW8QN76nuSCi62sh8YgK6y6c30eb/iCV8X8emhOmzo="
+    project: geoweb-fmi-fi
+    skip_cleanup: true
+    on:
+      branch: master
