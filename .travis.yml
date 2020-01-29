@@ -8,7 +8,6 @@ script:
 - npm install
 - npm run clean
 - npm run deploy:prod-quick
-- cp -f src/static/urls-firebase.json dist/urls.json
 deploy:
   - provider: firebase
     token:
