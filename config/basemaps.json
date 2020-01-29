@@ -171,6 +171,16 @@
             "copyRight": "Basiskaart bronnen: ESRI Nederland, ESRI, Kadaster, CBS en Rijkswaterstaat"
         }
     },
+    "arcGisCanvasGray": {
+        "title":"ArcGIS Gray Canvas Map",
+        "EPSG:3857": {
+            "home": "//services.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Gray_Base/MapServer/tile/",
+            "minLevel": 1,
+            "maxLevel": 16,
+            "tileServerType": "arcgisonline",
+            "copyRight": "Basemap copyright: 2013 ESRI, DeLorme, NAVTEQ"
+        }
+    },
     "arcGisTopo": {
       "title":"ArcGIS topo map",
         "EPSG:3857": {
