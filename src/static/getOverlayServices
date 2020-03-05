@@ -1,8 +1,1 @@
-[{
-    "name": "Tilastokeskus",
-    "title": "Tilastokeskus",
-    "service": "https://geo.stat.fi/geoserver/wms",
-    "type": "WMS",
-    "goal": "OVERLAY",
-    "roles": ["USER", "MET"]
-}]
+[]
