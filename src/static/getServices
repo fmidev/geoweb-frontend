@@ -15,6 +15,14 @@
     "roles": ["USER", "MET"]
 },
 {
+    "name": "Tilastokeskus",
+    "title": "Tilastokeskus",
+    "service": "https://geo.stat.fi/geoserver/wms",
+    "type": "WMS",
+    "goal": "LAYER",
+    "roles": ["USER", "MET"]
+},
+{
     "name": "EUMETSAT",
     "title": "EUMETSAT",
     "service": "https://eumetview.eumetsat.int/geoserv/wms",
