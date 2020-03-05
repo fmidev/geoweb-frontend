@@ -1,7 +1,7 @@
 [{
-    "name": "OVL",
-    "title": "OVL_EXT",
-    "service": "https://geoweb.knmi.nl/adaguc-services/adagucserver?DATASET=OVL",
+    "name": "Tilastokeskus",
+    "title": "Tilastokeskus",
+    "service": "https://geo.stat.fi/geoserver/wms",
     "type": "WMS",
     "goal": "OVERLAY",
     "roles": ["USER", "MET"]
