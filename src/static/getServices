@@ -23,6 +23,14 @@
     "roles": ["USER", "MET"]
 },
 {
+    "name": "Väylävirasto",
+    "title": "Väylävirasto",
+    "service": "https://julkinen.vayla.fi/inspirepalvelu/avoin/wms",
+    "type": "WMS",
+    "goal": "LAYER",
+    "roles": ["USER", "MET"]
+},
+{
     "name": "EUMETSAT",
     "title": "EUMETSAT",
     "service": "https://eumetview.eumetsat.int/geoserv/wms",
